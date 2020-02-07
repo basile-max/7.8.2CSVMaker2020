@@ -1,0 +1,140 @@
+NOTE  |CSV Created with CSV Maker 2020
+NOTE  |----SUITABLE FOR WIDENESS----
+NOTE  |★★ Mass Miners Strategy TH10-13 ★★
+NOTE  |Athr:[Q]'Hollow inspired by Navy_Seals
+NOTE  |Modify for Wideness : ratakantez 4.2.2020
+NOTE  |Verson: v2.1 [24/01/2020]
+NOTE  |Th-10 : 32 Miners, 6 Bowlers, 6 WallBrakers, 4 Heals, 1 Rage, 1 Poison
+NOTE  |Th-11 : 36 Miners, 6 Bowlers, 4 WallBrakers, 4 Heals, 1 Rage, 1 Poison
+NOTE  |Th-12/13 : 39 Miners, 6 Bowlers, 5 WallBrakers, 4 Heals, 1 Rage, 1 Poison
+NOTE  |CC : Rage/Giant WallWrecker
+Note  |Works on EXTERNAL EDGE
+ 
+      |-----------------------------------------Mass Miner Start--------------------------------------------------|
+      |                                            [Q]'Hollow                                                     |
+      
+      |_TROOPNAME_|____TH06___|____TH07___|____TH08___|____TH09___|____TH10___|____TH11___|____TH12___|____TH13___|
+TRAIN |Mine       |0          |0          |0          |0          |32         |36         |39         |39         |
+TRAIN |Bowl       |0          |0          |0          |0          |6          |6          |6          |6          |
+TRAIN |Wall       |0          |0          |0          |0          |6          |4          |5          |5          |
+TRAIN |WallW      |0          |0          |0          |0          |0          |0          |3          |3          |
+
+TRAIN |RSpell     |0          |0          |0          |0          |1          |1          |1          |1          |
+TRAIN |HSpell     |0          |0          |0          |0          |4          |4          |4          |4          |
+TRAIN |PSpell     |0          |0          |0          |0          |1          |1          |1          |1          |
+ 
+
+      |_TROOPNAME_|____TH06___|____TH07___|____TH08___|____TH09___|____TH10___|____TH11___|____TH12___|____TH13___|
+TRAIN |King       |0          |0          |0          |0          |1          |1          |1          |1          |
+TRAIN |Queen      |0          |0          |0          |0          |1          |1          |1          |1          |
+TRAIN |Warden     |0          |0          |0          |0          |0          |315        |319        |319        |
+TRAIN |Champion   |0          |0          |0          |0          |0          |0          |0          |1          |
+
+      |___________|____TH06___|____TH07___|____TH08___|____TH09___|____TH10___|____TH11___|____TH12___|____TH13___|
+REDLN |0          |0          |0          |0          |0          |4          |4          |4          |4          |
+DRPLN |0          |0          |0          |0          |0          |0          |0          |0          |0          |
+
+      |___________|____TH06___|____TH07___|____TH08___|____TH09___|____TH10___|____TH11___|____TH12___|____TH13___|
+CCREQ |           |           |           |           |           |Giant Rage |Giant Rage |Giant Rage |Giant Rage |
+
+      |EXTR. GOLD |EXTR.ELIXIR|EXTR. DARK |DEPO. GOLD |DEPO.ELIXIR|DEPO. DARK |TOWNHALL   |FORCED SIDE|___________|
+SIDE  |0          |0          |2          |0          |0          |5          |0          |           |           |
+      |EAGLE      |INFERNO    |XBOW       |WIZTOWER   |MORTAR     |AIRDEFENSE |GEMBOX     |GEMBOX     |           |
+SIDEB |0          |0          |0          |0          |0          |0          |0          |0          |           |
+
+
+      |VECTOR_____|SIDE_______|DROP_POINTS|ADDTILES___|VERSUS_____|RANDOMX_PX_|RANDOMY_PX_|___________|___________|
+MAKE  |A          |FRONT-RIGHT|10         |0          |INT-EXT    |-8         |8          |           |           |
+MAKE  |B          |FRONT-LEFT |10         |0          |INT-EXT    |-8         |8          |           |           |
+MAKE  |C          |FRONT-LEFT |10         |-11        |INT-EXT    |-15        |15         |           |           |
+MAKE  |D          |FRONT-RIGHT|10         |-11        |INT-EXT    |-15        |15         |           |           |
+MAKE  |E          |FRONT-RIGHT|10         |-17        |INT-EXT    |-15        |15         |           |           |
+MAKE  |F          |FRONT-LEFT |10         |-21        |INT-EXT    |-15        |15         |           |           |
+MAKE  |G          |FRONT-RIGHT|10         |-21        |INT-EXT    |-15        |15         |           |           |
+MAKE  |H          |FRONT-LEFT |10         |-25        |INT-EXT    |-15        |15         |           |           |
+MAKE  |I          |FRONT-RIGHT|10         |-25        |INT-EXT    |-15        |15         |           |           |
+MAKE  |J          |FRONT-RIGHT|1          |-1         |IGNORE     |-15        |15         |TOWNHALL   |           |
+
+      |VECTOR_____|INDEX______|QTY_X_VECT_|TROOPNAME__|DELAY_DROP_|DELAYCHANGE|SLEEPAFTER_|___________|___________|
+DROP  |A          |1          |1          |Castle     |0          |0          |600-750    |W3         |           |
+DROP  |A          |4          |1          |StoneS     |0          |0          |500-600    |W3         |           |
+DROP  |B          |1          |1          |SiegeB     |0          |0          |3000       |W3         |           |
+DROP  |A          |2          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |2          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |4          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |2          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |6          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |3          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |5          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |3          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |1          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |4          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |4          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |4          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |2          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |1          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |6          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |2          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |1          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |2          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |6          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |2          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |5          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |4          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |4          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |4          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |4          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |3          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |3          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |2          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |1          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |4          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |2          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |6          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |5          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |4          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |6          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |4          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |3          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |4          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |A          |4          |1          |Mine       |70-90      |60-80      |105-120    |W1         |           |
+DROP  |B          |3          |1          |Mine       |70-90      |50-90      |105-120    |W1         |           |
+DROP  |B          |5          |1          |King       |0          |0          |100-200    |W4         |           |
+DROP  |B          |3          |1          |Champion   |0          |0          |100-200    |W4         |           |
+DROP  |B          |1          |1          |Queen      |0          |0          |600-700    |W4         |           |
+DROP  |A          |1          |1          |Bowl       |40-60      |40-60      |60-70      |W2         |           |
+DROP  |A          |3          |1          |Bowl       |40-60      |40-60      |60-70      |W2         |           |
+DROP  |B          |2          |1          |Bowl       |40-60      |40-60      |60-70      |W2         |           |
+DROP  |B          |1          |1          |Bowl       |40-60      |40-60      |60-70      |W2         |           |
+DROP  |B          |3          |1          |Bowl       |40-60      |40-60      |60-70      |W2         |           |
+DROP  |A          |2          |1          |Bowl       |40-60      |40-60      |60-70      |W2         |           |
+DROP  |B          |1          |1          |Wall       |50-70      |50-70      |50-70      |W1         |           |
+DROP  |A          |2          |1          |Wall       |50-70      |50-70      |50-70      |W1         |           |
+DROP  |B          |2          |1          |Wall       |50-70      |50-70      |50-70      |W1         |           |
+DROP  |A          |2          |1          |Wall       |50-70      |50-70      |50-70      |W1         |           |
+DROP  |B          |2          |1          |Wall       |50-70      |50-70      |50-70      |W1         |           |
+DROP  |A          |1          |1          |Wall       |50-70      |50-70      |50-70      |W1         |           |
+DROP  |A          |3          |1          |Warden     |0          |0          |100-200    |W2         |           |
+DROP  |A          |2          |1          |BattleB    |0          |0          |0          |           |           |
+WAIT  |4200-5500  |           |           |           |           |           |           |           |           |
+DROP  |C          |4          |1          |HSpell     |0          |0          |100-200    |           |           |
+DROP  |D          |4          |1          |HSpell     |0          |0          |5000-5500  |           |           |
+DROP  |E          |1          |1          |PSpell     |0          |0          |100-200    |           |           |
+DROP  |F          |5          |1          |HaSpell    |0          |0          |0          |           |           |
+DROP  |E          |1          |1          |RSpell     |0          |0          |1000-1200  |           |           |
+WAIT  |14000-15000|           |           |           |           |           |           |           |           |
+DROP  |F          |4          |1          |HSpell     |0          |0          |100-200    |           |           |
+DROP  |G          |4          |1          |HSpell     |0          |0          |100-200    |           |           |
+DROP  |G          |1          |1          |PSpell     |0          |0          |0          |           |           |
+DROP  |G          |4          |1          |PSpell     |0          |0          |0          |           |           |
+DROP  |J          |1          |1          |FSpell     |0          |0          |0          |           |           |
+DROP  |A          |1          |1          |Warden     |0          |0          |100-200    |           |           |
+WAIT  |15000-15000|           |           |           |           |           |           |           |           |
+DROP  |H          |3          |1          |PSpell     |0          |0          |100-200    |           |           |
+DROP  |H          |3          |1          |RSpell     |0          |0          |100-200    |           |           |
+DROP  |H          |3          |1          |HSpell     |0          |0          |100-200    |           |           |
+RECALC|           |           |           |           |           |           |           |           |           |
+DROP  |A-B        |1-5        |5          |Remain     |0          |0          |0          |           |           |
+
+      |                                                                                                           |
+      |------------------------------------------mass miner End---------------------------------------------------|
