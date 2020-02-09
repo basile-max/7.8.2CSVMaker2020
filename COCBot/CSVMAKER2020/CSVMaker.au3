@@ -217,7 +217,7 @@ Func InfoAfterStartButton()
 			   "Alt + F show your final writing of your CSV with NotePad. " & @CRLF & _
 			   "Alt + D close your final writing." & @CRLF & _
 			   "Please close your csv file after seeing to continue."
-			   ShellExecute("https://www.youtube.com/watch?v=1UBOYQxy8Kw")
+			   ShellExecute("https://www.youtube.com/watch?v=fZnRzF9EiEI&list=PLmIv-oiz2PdDUq_UJC01bF_07q32CKJJd&index=1")
 
 ;~ 			   MsgBox($MB_OK,"INFO FOR DROPING", $TextforHelp, 150)
 
@@ -262,7 +262,7 @@ Func AddRandomXandY()
 	Else
 		GUICtrlSetState($txtRandomX,$GUI_DISABLE)
 		GUICtrlSetState($lblRandomXY1,$GUI_DISABLE)
-		GUICtrlSetState($txtRandomX,$GUI_DISABLE)
+		GUICtrlSetState($txtRandomY,$GUI_DISABLE)
 	EndIf
 EndFunc
 
