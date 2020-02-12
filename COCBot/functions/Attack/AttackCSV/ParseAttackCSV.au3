@@ -104,7 +104,7 @@ Func ParseAttackCSV($debug = False)
 		$aLines = FileReadToArray($ConvertedFileInAttack)
 		SetLog("Random Indexes that you set, changed randomly.",$COLOR_SUCCESS)
 		SetLog("You can see randomised log file in..",$COLOR_SUCCESS)
-		SetLog($BattleCSVLogAB,$COLOR_SUCCESS)
+		SetLog($BattleCSVLog,$COLOR_SUCCESS)
 	EndIf
 ;~ *****************************************************************************************************************************************************************************************************
 ;~ *****************************************************************************************************************************************************************************************************
