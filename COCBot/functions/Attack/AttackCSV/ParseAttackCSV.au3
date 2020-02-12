@@ -36,7 +36,80 @@ Func ParseAttackCSV($debug = False)
 	Local $f, $line, $acommand, $command
 	Local $value1 = "", $value2 = "", $value3 = "", $value4 = "", $value5 = "", $value6 = "", $value7 = "", $value8 = "", $value9 = ""
 	If FileExists($g_sCSVAttacksPath & "\" & $filename & ".csv") Then
-		Local $aLines = FileReadToArray($g_sCSVAttacksPath & "\" & $filename & ".csv")
+	Local $aLines = FileReadToArray($g_sCSVAttacksPath & "\" & $filename & ".csv")
+		;Randomise Starts...
+;~ *****************************************************************************************************************************************************************************************************
+;~ *****************************************************************************************************************************************************************************************************
+;~ *****************************************************************************************************************************************************************************************************
+;~ *****************************************************************************************************************************************************************************************************
+	If ($g_bDoRandomiseDB And $g_iMatchMode = $DB) or ($g_bDoRandomiseAB And $g_iMatchMode = $LB) Then
+		$ConvertedFileInAttack = @ScriptDir & "\CSV\Attack\CSVFileThatWillConvert\randomised_" & $filename & ".csv"
+		FileDelete($ConvertedFileInAttack)
+		Sleep(250)
+		FileOpen($ConvertedFileInAttack,0)
+		Local $BattleCSVLog = $g_sProfilePath & "\" & $g_sProfileCurrentName & "\BattleCSVIndexLog_"& $CSVFileName_inDB_Combo_For_Randomise &".log"
+		FileOpen($BattleCSVLog,0)
+		FileWrite($BattleCSVLog,"**************************************************************************************************************" & @CRLF)
+		FileWrite($BattleCSVLog,_NowDate() & " --- " &  _NowTime(5) & @CRLF)
+		FileWrite($BattleCSVLog,"**************************************************************************************************************" & @CRLF)
+
+		$ReadFile = $g_sCSVAttacksPath & "\" & $filename & ".csv"
+		$CSVLines = FileReadToArray($ReadFile)
+
+		For $a = 0 To UBound($CSVLines) - 1
+			If 	StringInStr($CSVLines[$a],"DROP  |",1) > 0 Then
+				$NewDropCommand = $CSVLines[$a]
+				For $b=1 to 8
+					If 	StringInStr($CSVLines[$a],"W" & String($b),1) > 0 Then
+						$SplitCSVLine = StringSplit($CSVLines[$a], "|")
+						If String(StringStripWS($SplitCSVLine[9],8)) = "W" & String($b) Then
+							If Int(StringStripWS($SplitCSVLine[3],8))-$b <= 0 Then
+								$LowIndexLimit = 1
+							Else
+								$LowIndexLimit = Int(StringStripWS($SplitCSVLine[3],8)) - $b
+							EndIf
+							If Int(StringStripWS($SplitCSVLine[3],8))+ $b > 10 Then
+								$HighIndexLimit = 10
+							Else
+								$HighIndexLimit = Int(StringStripWS($SplitCSVLine[3],8)) + $b
+							EndIf
+							$IndexOfDropCommand = Random($LowIndexLimit,$HighIndexLimit,1)
+							If $IndexOfDropCommand < 10 Then
+								$StringNewIndex = $IndexOfDropCommand & "          "
+							Else
+								$StringNewIndex = $IndexOfDropCommand & "         "
+							EndIf
+						EndIf
+						$NewDropCommand = "DROP  "
+						For $c=0 To UBound($SplitCSVLine)-3
+							If $c=1 Then
+								$NewDropCommand = $NewDropCommand & "|" & $StringNewIndex
+							Else
+								$NewDropCommand = $NewDropCommand & "|" & $SplitCSVLine[$c+2]
+							EndIf
+						Next
+					EndIf
+				Next
+				$AddedCommand = $NewDropCommand  & @CRLF
+				SetLog($NewDropCommand,$COLOR_INFO)
+			Else
+				$AddedCommand = $CSVLines[$a] & @CRLF
+			EndIf
+			FileWrite($ConvertedFileInAttack,$AddedCommand)
+			FileWrite($BattleCSVLog,$AddedCommand)
+		Next
+		FileWrite($BattleCSVLog,"<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>" & @CRLF & @CRLF)
+		FileClose($ConvertedFileInAttack)
+		FileClose($BattleCSVLog)
+		$aLines = FileReadToArray($ConvertedFileInAttack)
+		SetLog("Random Indexes that you set, changed randomly.",$COLOR_SUCCESS)
+		SetLog("You can see randomised log file in..",$COLOR_SUCCESS)
+		SetLog($BattleCSVLogAB,$COLOR_SUCCESS)
+	EndIf
+;~ *****************************************************************************************************************************************************************************************************
+;~ *****************************************************************************************************************************************************************************************************
+;~ *****************************************************************************************************************************************************************************************************
+;~ *****************************************************************************************************************************************************************************************************
 
 		; Read in lines of text until the EOF is reached
 		For $iLine = 0 To UBound($aLines) - 1
