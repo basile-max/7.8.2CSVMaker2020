@@ -77,7 +77,6 @@ Func cmbScriptNameDB()
 
 	EndIf
 	GUICtrlSetData($g_hLblNotesScriptDB, $result)
-	ifcombonamechange()
 EndFunc   ;==>cmbScriptNameDB
 
 Func cmbScriptNameAB()
@@ -102,7 +101,7 @@ Func cmbScriptNameAB()
 
 	EndIf
 	GUICtrlSetData($g_hLblNotesScriptAB, $result)
-	ifcombonamechange()
+
 EndFunc   ;==>cmbScriptNameAB
 
 
