@@ -15,7 +15,7 @@
 ; ===============================================================================================================================
 
 Global $Program_Name = "CSV Maker " ;PROGRAM NAME!!!!
-Global $Program_Version = "v1.7"    ;PROGRAM VERSION!!! (Do not change it.. Because update is controlling with this variable)
+Global $Program_Version = "v1.8"    ;PROGRAM VERSION!!! (Do not change it.. Because update is controlling with this variable)
 Global $g_sSaveLocation  ;Save Location of CSV file
 Global $g_lSaveLocation  ;Log Location of CSV file
 ;~ <>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~
@@ -1382,7 +1382,7 @@ Global $UseDontRandomiseAB
 ;~ <>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~<>~
 Global $DoRandomiseDB, $DoRandomiseAB ; Checkboxes in Mybot Gui to Randomise
 Global $DontRandomiseDB, $DontRandomiseAB ;Checkboxes in Mybot Gui not to Randomise
-Global $BackUpDB, $BackUpAB ;Buttons to avoid deleting original csv file in Mybot Gui
+Global $SeeRandomisedAB, $SeeRandomisedDB ;Buttons to see randomised csv file in Mybot Gui
 Global $IndexOfComboDB, $IndexOfComboAB ;Variables to get Number of ındex from $g_hCmbScriptNameDB and $g_hCmbScriptNameAB
 Global $CSVFileName_inDB_Combo, $CSVFileName_inAB_Combo ; Variables to get Name of csv file from $g_hCmbScriptNameDB and $g_hCmbScriptNameAB
 Global $CSVFileName_inDB_Combo_For_Randomise, $CSVFileName_inAB_Combo_For_Randomise ; Variables to get Name of csv file from $g_hCmbScriptNameDB and $g_hCmbScriptNameAB in Randomise Functions
