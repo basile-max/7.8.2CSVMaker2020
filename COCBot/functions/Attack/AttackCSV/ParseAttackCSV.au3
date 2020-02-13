@@ -37,12 +37,13 @@ Func ParseAttackCSV($debug = False)
 	Local $value1 = "", $value2 = "", $value3 = "", $value4 = "", $value5 = "", $value6 = "", $value7 = "", $value8 = "", $value9 = ""
 	If FileExists($g_sCSVAttacksPath & "\" & $filename & ".csv") Then
 	Local $aLines = FileReadToArray($g_sCSVAttacksPath & "\" & $filename & ".csv")
-		;Randomise Starts...
+;Randomise Starts...
 ;~ *****************************************************************************************************************************************************************************************************
 ;~ *****************************************************************************************************************************************************************************************************
 ;~ *****************************************************************************************************************************************************************************************************
 ;~ *****************************************************************************************************************************************************************************************************
 	If ($g_bDoRandomiseDB And $g_iMatchMode = $DB) or ($g_bDoRandomiseAB And $g_iMatchMode = $LB) Then
+		DirCreate(@ScriptDir & "\CSV\Attack\CSVFileThatWillConvert\")
 		$ConvertedFileInAttack = @ScriptDir & "\CSV\Attack\CSVFileThatWillConvert\randomised_" & $filename & ".csv"
 		FileDelete($ConvertedFileInAttack)
 		Sleep(250)
