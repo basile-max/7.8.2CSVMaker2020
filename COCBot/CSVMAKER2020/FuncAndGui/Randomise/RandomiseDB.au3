@@ -27,7 +27,7 @@ EndFunc
 
 Func infowideness()
 	Local $infoWideness
-	$infoWideness = "This feature will only work if you use 'CSV Maker 2020 CSV File'" &@CRLF &	"Because CSV Maker Put a Mark like 'W[1-8] in your DROP Command that you set and" &@CRLF & "If Wideness Otion (Dice) is CHECKED, Bot save original CSV and re-writes CSV with different INDEX number" &@CRLF & "If you want to get your original File, You can Click 'B' as Back-up to get back Original CSV File"
+	$infoWideness = "This feature will only work if you use 'CSV Maker 2020 CSV File'" &@CRLF &	"Because CSV Maker Put a Mark like 'W[1-8] in your DROP Command that you set and" &@CRLF & "If Wideness Otion (Dice) is CHECKED, Bot re-writes CSV with different INDEX number" &@CRLF & "This will not change your original CSV and Each battle you can see the new indexes"
 	MsgBox($MB_OK,"INFO FOR WIDENESS",$infoWideness)
 EndFunc
 Func ifcombonamechange()
